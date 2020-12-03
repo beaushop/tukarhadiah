@@ -11,20 +11,16 @@
       object-fit:scale-down;
     }
     .container {
-      width: 50vw;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
+      align-items: center;
+      display: flex;
+      justify-content:center;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-  <img id="verify" src="">
+    <div><img id="verify" src=""></div>
   </div>
 <script>
   var n = localStorage.getItem('on_load_counter');
