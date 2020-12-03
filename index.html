@@ -10,31 +10,21 @@
       width:50vw;
       object-fit:scale-down;
     }
-    .text {
-      background-color: white;
-      text-align: center;
-      color: rgb(180,80,165);
-      z-index: 2;
+    .container {
+      margin:auto;
+      width: 50vw;
       position: absolute;
-      float: left;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 5px;
-      border-radius: 5%;
-    }
-    .container {
-      margin:auto;
-      width: 50vw;
-      position: relative;
+      margin: auto;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-  <div class="text" id="textshow"></div>
   <img id="verify" src="">
   </div>
 <script>
@@ -50,10 +40,8 @@
 
   if (localStorage.getItem("on_load_counter") > 1) {
     document.getElementById("verify").src = "empty.jpg";
-    document.getElementById("textshow").innerHTML = "Kamu sudah pernah klaim hadiah.";
   } else {
     document.getElementById("verify").src = "gift.jpg";
-    document.getElementById("textshow").innerHTML = "Klaim hadiahmu di BEAU!";
   }
   </script>
 </body>
