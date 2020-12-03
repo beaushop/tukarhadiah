@@ -7,20 +7,26 @@
       font-family: sans-serif;
     }
     img {
-      width:50vw;
+      width:80vw;
       object-fit:scale-down;
     }
-    .container {
-      align-items: center;
-      display: flex;
-      justify-content:center;
+    .centering {
+      display: inline-block;
+      text-align: center;
+    }
+    .centering::before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 0px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div><img id="verify" src=""></div>
+  <div class="container centering">
+    <div class="centering"><img id="verify" src=""></div>
   </div>
 <script>
   var n = localStorage.getItem('on_load_counter');
