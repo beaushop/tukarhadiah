@@ -1,8 +1,10 @@
 <head>
   <meta charset="UTF-8">
+  <title>Tukarkan Hadiah</title>
   <style>
     body {
       background-color: rgb(255,230,230);
+      font-family: sans-serif;
     }
     img {
       width:50vw;
@@ -15,8 +17,8 @@
       z-index: 2;
       float:left;
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 50vw;
+      left: 50vh;
     }
     .container {
       margin:auto;
@@ -44,10 +46,10 @@
 
   if (localStorage.getItem("on_load_counter") > 1) {
     document.getElementById("verify").src = "empty.jpg";
-    document.getElementById("textshow").innerHTML = "You have already claimed your prize.";
+    document.getElementById("textshow").innerHTML = "Kamu sudah pernah klaim hadiah.";
   } else {
     document.getElementById("verify").src = "gift.jpg";
-    document.getElementById("textshow").innerHTML = "You can claim your prize!";
+    document.getElementById("textshow").innerHTML = "Klaim hadiahmu di BEAU!";
   }
   </script>
 </body>
