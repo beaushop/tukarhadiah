@@ -1,0 +1,27 @@
+<head>
+  <meta charset="UTF-8">
+  <style>
+    img {max-width:100%;max-height:100%;margin:auto;}
+  </style>
+</head>
+
+<body>
+<span id="verify"></span>
+<script>
+  var n = localStorage.getItem('on_load_counter');
+
+  if (n === null) {
+      n = 0;
+  }
+
+  n++;
+
+  localStorage.setItem("on_load_counter", n);
+
+  if (localStorage.getItem("on_load_counter") > 1) {
+    document.getElementById("verify").innerHTML = "<img src=empty.jpg>";
+  } else {
+    document.getElementById("verify").innerHTML = "<img src=gift.jpg>";
+  }
+  </script>
+</body>
