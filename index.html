@@ -10,23 +10,18 @@
       width:80vw;
       object-fit:scale-down;
     }
-    .centering {
-      display: inline-block;
-      text-align: center;
-    }
-    .centering::before {
-      content: '';
-      display: inline-block;
+    .container {
       height: 100%;
-      vertical-align: middle;
-      width: 0px;
+      display: flex;
+      align-content: center;
+      justify-items: center;
     }
   </style>
 </head>
 
 <body>
-  <div class="container centering">
-    <div class="centering"><img id="verify" src=""></div>
+  <div class="container">
+    <div><img id="verify" src=""></div>
   </div>
 <script>
   var n = localStorage.getItem('on_load_counter');
