@@ -1,12 +1,28 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    img {max-width:100%;max-height:100%;margin:auto;}
+    body {
+      background-color: rgb(255,230,230);
+    }
+    img {
+      max-width:50%;
+      margin:auto
+    }
+    .text {
+      background-color: white;
+      text-align: center;
+      color: rgb(180,80,165);
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
   </style>
 </head>
 
 <body>
 <span id="verify"></span>
+<div class="text" id="textshow"></div>
 <script>
   var n = localStorage.getItem('on_load_counter');
 
@@ -20,8 +36,10 @@
 
   if (localStorage.getItem("on_load_counter") > 1) {
     document.getElementById("verify").innerHTML = "<img src=empty.jpg>";
+    document.getElementById("textshow").innerHTML = "You have already claimed your prize.";
   } else {
     document.getElementById("verify").innerHTML = "<img src=gift.jpg>";
+    document.getElementById("textshow").innerHTML = "You can claim your prize!";
   }
   </script>
 </body>
