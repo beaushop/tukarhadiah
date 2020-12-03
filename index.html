@@ -27,8 +27,10 @@
 </head>
 
 <body>
-<div id="verify"></div>
-<div class="text" id="textshow"></div>
+  <div class="container">
+  <div class="text" id="textshow"></div>
+  <img id="verify" src="">
+  </div>
 <script>
   var n = localStorage.getItem('on_load_counter');
 
@@ -41,10 +43,10 @@
   localStorage.setItem("on_load_counter", n);
 
   if (localStorage.getItem("on_load_counter") > 1) {
-    document.getElementById("verify").innerHTML = "<img src=empty.jpg>";
+    document.getElementById("verify").src = "empty.jpg";
     document.getElementById("textshow").innerHTML = "You have already claimed your prize.";
   } else {
-    document.getElementById("verify").innerHTML = "<img src=gift.jpg>";
+    document.getElementById("verify").src = "gift.jpg";
     document.getElementById("textshow").innerHTML = "You can claim your prize!";
   }
   </script>
